@@ -41,7 +41,6 @@ public class ClientInterceptor implements EJBClientInterceptor {
 
   @Override
   public void handleInvocation(EJBClientInvocationContext context) throws Exception {
-
     log.debug("In the client interceptor handleInvocation : " + this.getClass().getName() + " " + context.getViewClass() + " " + context.getLocator());
 
     // Must make this call

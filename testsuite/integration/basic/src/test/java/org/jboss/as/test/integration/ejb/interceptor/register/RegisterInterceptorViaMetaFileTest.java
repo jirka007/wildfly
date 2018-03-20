@@ -61,14 +61,9 @@ public class RegisterInterceptorViaMetaFileTest {
    TestSingleton testSingleton;
 
    @Test
-   public void testInvokeSLSBthoughSingleton() {
+   public void testInvokeSLSBthoughSingleton() throws Exception {
       String echo = "this it testing string";
-      String sss = "";
-      try {
-         sss = testSingleton.test(echo);
-      } catch (Exception ee) {
-         Assert.fail(ee.getMessage());
-      }
+      String sss = testSingleton.test(echo);
       Assert.assertTrue("SLSB returned wrong value through singleton", sss.equals(echo));
    }
 }

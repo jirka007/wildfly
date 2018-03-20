@@ -22,13 +22,9 @@
 package org.jboss.as.test.integration.ejb.interceptor.register;
 
 import javax.ejb.Stateless;
-import java.util.logging.Logger;
 
 @Stateless
-//@LocalBean
 public class TestSLSB implements TestRemote {
-
-  private Logger log = Logger.getLogger(TestSLSB.class.getName());
 
   public String invoke(String s) {
     return s;
